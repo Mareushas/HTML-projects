@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width",initial-scale=1.0/>
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <label for="name" id="name-label">Enter your name: <input id="name" type="text" required placeholder="Your Name"/></label>
+      <label for="email" id="email-label">Enter your email: <input id="email" type="email" required placeholder="Your email"/></label>
+      <label for="number" id="number-label">Enter your age (min 13): <input id="number" type="number" min="13" max="120" placeholder="Your age"/> </label>
+      </fieldset>
+      <fieldset>
+        <legend>Your relationship status</legend>
+        <label for="single"><input id="single-status" type="radio" name="relationship-status" value="single" class="inline" checked/> Single</label>
+      <label for="in-relationship"><input id="occupied-status" type="radio" name="relationship-status" value="occupied" class="inline" /> In a relationship</label>
+      <label for="happiness"> How happy you feel currently?
+        <select id="dropdown" required>
+          <option value="">Select</option>
+          <option value="1">Very sad</option>
+          <option value="2">Sad</option>
+          <option value="3">Neither sad or happy</option>
+          <option value="4">Happy</option>
+          <option value="5">Very happy</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Excercise</legend>
+        <label for="excercise-description"> How much do you excercise every week:
+        <textarea id="excercise-description" name="excercise" rows="3" cols="30" placeholder="I run 3km 5 days out of 7..."></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Interests (choose one or more)</legend>
+      <label class="check-label" for="basketball">Basketball <input class="check" id="basketball" type="checkbox" name="interest" value="basketball"></label>
+      <label class="check-label" for="footballl">Football <input class="check" id="football" type="checkbox" name="interest" value="football"></label>
+      <label class="check-label" for="rugby">Rugby <input class="check" id="rugby" type="checkbox" name="interest" value="rugby"></label>
+      <label class="check-label" for="voleyball">Voleyball <input class="check" id="voleyball" type="checkbox" name="interest" value="voleyball"></label>
+      <label class="check-label" for="other">Other <input class="check" id="other" type="checkbox" name="interest" value="other"></label>
+      </fieldset>
+      <input id="submit" type="submit" value="submit"/>
+    </form>
+  </body>
+</html>
